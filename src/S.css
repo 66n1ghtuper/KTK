@@ -1,0 +1,153 @@
+
+.S {
+  padding: 40px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  min-height: 20vh;
+}
+
+.S-header {
+  position: relative;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+.S-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.S-title-shadow {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.092);
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  z-index: 1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.S-content {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.SL {
+  border-left: 3px solid #325480;
+  padding-left: 15px;
+}
+
+.S-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  margin: 0;
+}
+
+.S-image-container {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.S-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .S-title {
+    font-size: 3rem;
+  }
+  
+  .S-title-shadow {
+    font-size: 4rem;
+    top: -25px;
+    left: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .S-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .S-title-shadow {
+    font-size: 3.2rem;
+    top: -15px;
+    left: -15px;
+    white-space: normal;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .S {
+    padding: 30px 15px;
+  }
+  
+  .S-header {
+    margin-bottom: 25px;
+    position: relative;
+    min-height: 80px; 
+  }
+  
+  .S-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .S-title-shadow {
+    font-size: 2.2rem;
+    top: -5px;
+    left: -10px;
+    position: absolute;
+    z-index: 1;
+    white-space: normal;
+    word-wrap: break-word;
+    width: calc(100% + 20px);
+    line-height: 0.9;
+  }
+  
+  .S-description {
+    font-size: 0.9rem;
+  }
+  
+  .SL {
+    padding-left: 12px;
+    border-left-width: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .S-title {
+    font-size: 1.6rem;
+  }
+  
+  .S-title-shadow {
+    font-size: 1.8rem;
+    top: -5px;
+    left: -8px;
+  }
+}

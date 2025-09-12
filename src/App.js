@@ -1,25 +1,51 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Header from './Header';
+import Menu from './Menu';
+import N from './N';
+import Advantages from './Advantages';
+import W from './W';
+import E from './E';
+import Q from './Q';
+import S from './S';
+import T from './T';
+import Footer from './Footer';
+
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  const checkIsMobile = () => {
+    setIsMobile(window.innerWidth <= 1060); 
+  };
+
+  useEffect(() => {
+    
+    checkIsMobile();
+    
+    window.addEventListener('resize', checkIsMobile);
+    
+    
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isMobile ? <Menu /> : <Header />}
+      <N /> 
+          
+       <Advantages /> 
+        <W /> 
+            <E /> 
+              <Q />
+              <S />
+              <T />
+               <Footer />
     </div>
   );
-}
+};
 
 export default App;

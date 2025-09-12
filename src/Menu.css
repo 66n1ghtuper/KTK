@@ -1,0 +1,280 @@
+
+
+.mobil-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.mobil-header.mobil-scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobil-header-container {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobil-logo-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.mobil-logo {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobil-logo:hover {
+  transform: scale(1.05);
+}
+
+.mobil-logo-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mobil-mobile-logo-text {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.mobil-mobile-logo-info {
+  display: none;
+}
+
+.mobil-mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2d3748;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+  z-index: 1001;
+}
+
+.mobil-mobile-menu-btn:hover {
+  color: #3182ce;
+}
+
+.mobil-navigation {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 0 2rem;
+  z-index: 1000;
+}
+
+.mobil-navigation.mobil-active {
+  right: 0;
+}
+
+.mobil-nav-list {
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobil-nav-item {
+  width: 100%;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.mobil-nav-link {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobil-nav-link:hover {
+  color: #3182ce;
+}
+
+.mobil-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.mobil-dropdown.mobil-active .mobil-dropdown-menu {
+  max-height: 500px;
+}
+
+.mobil-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobil-dropdown-item a {
+  padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: block;
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.mobil-dropdown-item a:hover {
+  background-color: #f7fafc;
+  color: #3182ce;
+  padding-left: 2.8rem;
+}
+
+.mobil-dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.mobil-dropdown.mobil-active .mobil-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.mobil-contact-info {
+  display: none;
+}
+
+.mobil-burger-contact-info {
+  display: block;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.mobil-office-hours, .mobil-contact-phone, .mobil-contact-email, .mobil-contact-address {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.mobil-office-hours strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #2d3748;
+}
+
+.mobil-contact-phone a, .mobil-contact-email a {
+  color: #3182ce;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobil-contact-phone a:hover, .mobil-contact-email a:hover {
+  color: #2c5282;
+}
+
+
+@media (min-width: 1060px) {
+  .mobil-mobile-menu-btn {
+    display: none;
+  }
+  
+  .mobil-navigation {
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  .mobil-nav-list {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  .mobil-nav-item {
+    width: auto;
+    border-bottom: none;
+  }
+  
+  .mobil-dropdown {
+    position: relative;
+  }
+  
+  .mobil-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .mobil-dropdown:hover .mobil-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+  
+  .mobil-dropdown-arrow {
+    display: none;
+  }
+  
+  .mobil-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+  
+  .mobil-burger-contact-info {
+    display: none;
+  }
+}
