@@ -4,6 +4,7 @@ import ImgTeam from './e3.jpg';
 import ImgExperience from './e2.png';
 import ImgReputation from './e1.png';
 import ImgLv from './e4.jpg';
+import ImgLNV from './lv.png';
 
 const E = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -44,14 +45,24 @@ const E = () => {
         "Инженерно-экологические изыскания",
         "Инженерно-гидрометеорологические изыскания",
         "Разработка и согласование проектов сокращения зон санитарной защиты, охранных зон"
-
-        
       ]
     },
     {
       id: 4,
       title: "Проектирование и монтаж инженерных систем",
       image: ImgLv, 
+      details: [
+        "Водоснабжение",
+        "Канализация",
+        "Электроснабжение 0.4 и 10kV",
+        "Газоснабжение, отопление, вентиляция, дымоходные системы",
+        "Слаботочные системы и сети, КИПиА"
+      ]
+    },
+    {
+      id: 5,
+      title: "Проектирование и монтаж инженерных систем",
+      image: ImgLNV, 
       details: [
         "Водоснабжение",
         "Канализация",
@@ -151,31 +162,58 @@ const E = () => {
           </div>
         </div>
         
-     
-        <div
-          className={`service-card full-width ${activeCard === 4 ? 'active' : ''}`}
-          onClick={() => handleCardClick(4)}
-          style={{ backgroundImage: `url(${servicesData[3].image})` }}
-        >
-          <div className="image-overlay"></div>
-          <div className="service-title">
-            {servicesData[3].title}
+        <div className="bottom-row">
+          <div
+            className={`service-card half-width ${activeCard === 4 ? 'active' : ''}`}
+            onClick={() => handleCardClick(4)}
+            style={{ backgroundImage: `url(${servicesData[3].image})` }}
+          >
+            <div className="image-overlay"></div>
+            <div className="service-title">
+              {servicesData[3].title}
+            </div>
+            
+            {activeCard === 4 && (
+              <div className="details-overlay">
+                <div className="details-content">
+                  <ul>
+                    {servicesData[3].details.map((detail, index) => (
+                      <li key={index}>{detail}</li>
+                    ))}
+                  </ul>
+                  <button className="details-button">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
           
-          {activeCard === 4 && (
-            <div className="details-overlay">
-              <div className="details-content">
-                <ul>
-                  {servicesData[3].details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-                <button className="details-button">
-                  Подробнее
-                </button>
-              </div>
+          <div
+            className={`service-card half-width ${activeCard === 5 ? 'active' : ''}`}
+            onClick={() => handleCardClick(5)}
+            style={{ backgroundImage: `url(${servicesData[4].image})` }}
+          >
+            <div className="image-overlay"></div>
+            <div className="service-title">
+              {servicesData[4].title}
             </div>
-          )}
+            
+            {activeCard === 5 && (
+              <div className="details-overlay">
+                <div className="details-content">
+                  <ul>
+                    {servicesData[4].details.map((detail, index) => (
+                      <li key={index}>{detail}</li>
+                    ))}
+                  </ul>
+                  <button className="details-button">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

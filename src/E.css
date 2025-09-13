@@ -17,6 +17,12 @@
   height: 500px;
 }
 
+.bottom-row {
+  display: flex;
+  gap: 20px;
+  height: 340px;
+}
+
 .wide {
   flex: 2;
   height: 100%;
@@ -37,9 +43,9 @@
   height: 40%;
 }
 
-.full-width {
-  width: 100%;
-  height: 340px;
+.half-width {
+  flex: 1;
+  height: 100%;
 }
 
 .service-card {
@@ -151,12 +157,18 @@
     gap: 15px;
   }
   
+  .bottom-row {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+  
   .narrow-column {
     flex-direction: column;
     gap: 15px;
   }
   
-  .wide, .tall, .small, .full-width {
+  .wide, .tall, .small, .half-width {
     height: 250px;
     flex: none;
     width: 100%;
