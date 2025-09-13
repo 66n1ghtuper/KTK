@@ -69,14 +69,14 @@
 }
 
 .nav-link:hover, .nav-button:hover {
-  color: #0066ff;
+  color: #252525;
   background-color: #f8faff;
 }
 
 .nav-button.active {
-  color: #0066ff;
+  color: #2b2b2b;
   background-color: #eff6ff;
-  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(65, 65, 65, 0.1);
 }
 
 .dropdown {
@@ -115,7 +115,7 @@
 }
 
 .dropdown-item:hover {
-  color: #0066ff;
+  color: #242424;
   background-color: #f8faff;
 }
 

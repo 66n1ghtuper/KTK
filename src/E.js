@@ -44,6 +44,8 @@ const E = () => {
         "Инженерно-экологические изыскания",
         "Инженерно-гидрометеорологические изыскания",
         "Разработка и согласование проектов сокращения зон санитарной защиты, охранных зон"
+
+        
       ]
     },
     {
@@ -66,24 +68,23 @@ const E = () => {
 
   return (
     <div className="services-gallery">
-      <div className="services-container">
-        {servicesData.map((service) => (
+      <div className="services-grid">
+        <div className="top-row">
           <div
-            key={service.id}
-            className={`service-card ${activeCard === service.id ? 'active' : ''}`}
-            onClick={() => handleCardClick(service.id)}
-            style={{ backgroundImage: `url(${service.image})` }}
+            className={`service-card wide ${activeCard === 1 ? 'active' : ''}`}
+            onClick={() => handleCardClick(1)}
+            style={{ backgroundImage: `url(${servicesData[0].image})` }}
           >
             <div className="image-overlay"></div>
             <div className="service-title">
-              {service.title}
+              {servicesData[0].title}
             </div>
             
-            {activeCard === service.id && (
+            {activeCard === 1 && (
               <div className="details-overlay">
                 <div className="details-content">
                   <ul>
-                    {service.details.map((detail, index) => (
+                    {servicesData[0].details.map((detail, index) => (
                       <li key={index}>{detail}</li>
                     ))}
                   </ul>
@@ -94,7 +95,88 @@ const E = () => {
               </div>
             )}
           </div>
-        ))}
+          
+          <div className="narrow-column">
+            <div
+              className={`service-card tall ${activeCard === 2 ? 'active' : ''}`}
+              onClick={() => handleCardClick(2)}
+              style={{ backgroundImage: `url(${servicesData[1].image})` }}
+            >
+              <div className="image-overlay"></div>
+              <div className="service-title">
+                {servicesData[1].title}
+              </div>
+              
+              {activeCard === 2 && (
+                <div className="details-overlay">
+                  <div className="details-content">
+                    <ul>
+                      {servicesData[1].details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
+                    </ul>
+                    <button className="details-button">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            <div
+              className={`service-card small ${activeCard === 3 ? 'active' : ''}`}
+              onClick={() => handleCardClick(3)}
+              style={{ backgroundImage: `url(${servicesData[2].image})` }}
+            >
+              <div className="image-overlay"></div>
+              <div className="service-title">
+                {servicesData[2].title}
+              </div>
+              
+              {activeCard === 3 && (
+                <div className="details-overlay">
+                  <div className="details-content">
+                    <ul>
+                      {servicesData[2].details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
+                    </ul>
+                    <button className="details-button">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        
+     
+        <div
+          className={`service-card full-width ${activeCard === 4 ? 'active' : ''}`}
+          onClick={() => handleCardClick(4)}
+          style={{ backgroundImage: `url(${servicesData[3].image})` }}
+        >
+          <div className="image-overlay"></div>
+          <div className="service-title">
+            {servicesData[3].title}
+          </div>
+          
+          {activeCard === 4 && (
+            <div className="details-overlay">
+              <div className="details-content">
+                <ul>
+                  {servicesData[3].details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+                <button className="details-button">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,71 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 .S {
-  padding: 40px 15px;
-  max-width: 1200px;
+  padding: 20px 15px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   text-align: left;
   min-height: 20vh;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .S-header {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: inline-block;
   width: 100%;
 }
 
 .S-title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #000;
   position: relative;
   z-index: 2;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.2;
   word-wrap: break-word;
 }
 
 .S-title-shadow {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: rgba(0, 0, 0, 0.092);
   position: absolute;
-  top: -30px;
-  left: -40px;
+  top: -15px;
+  left: -10px;
   z-index: 1;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   pointer-events: none;
   white-space: nowrap;
 }
 
 .S-content {
-  max-width: 1000px;
-  margin: 0 auto 30px;
+  max-width: 1400px;
+  margin: 0 auto 20px;
 }
 
 .SL {
-  border-left: 3px solid #325480;
-  padding-left: 15px;
+  border-left: 5px solid #325480;
+  padding-left: 12px;
 }
 
 .S-description {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.4;
   color: #333;
   text-align: left;
   margin: 0;
 }
 
 .S-image-container {
-  max-width: 1000px;
-  margin: 30px auto 0;
+  max-width: 1400px;
+  margin: 20px auto 0;
   position: relative;
-  z-index: 1;
+  z-index: -1;
+  top: 0;
 }
 
 .S-image {
@@ -73,81 +77,73 @@
   height: auto;
 }
 
-@media (max-width: 1024px) {
+
+@media (min-width: 768px) {
+  .S {
+    padding: 30px 20px;
+  }
+  
   .S-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   
   .S-title-shadow {
     font-size: 4rem;
-    top: -25px;
-    left: -30px;
+    top: -30px;
+    left: -25px;
+  }
+  
+  .S-description {
+    font-size: 1.4rem;
+  }
+  
+  .S-image-container {
+    top: -100px;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+  .S {
+    padding: 40px 15px;
+  }
+  
   .S-title {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    font-size: 3.5rem;
   }
   
   .S-title-shadow {
-    font-size: 3.2rem;
-    top: -15px;
-    left: -15px;
-    white-space: normal;
-    width: 100%;
+    font-size: 6rem;
+    top: -45px;
+    left: -40px;
+  }
+  
+  .S-description {
+    font-size: 1.8rem;
+  }
+  
+  .S-image-container {
+    top: -200px;
+  }
+  
+  .SL {
+    border-left: 8px solid #325480;
+    padding-left: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .S {
-    padding: 30px 15px;
-  }
-  
-  .S-header {
-    margin-bottom: 25px;
-    position: relative;
-    min-height: 80px; 
-  }
-  
+
+@media (max-width: 510px) {
   .S-title {
     font-size: 1.8rem;
-    letter-spacing: 0.5px;
-    position: relative;
-    z-index: 2;
   }
   
   .S-title-shadow {
     font-size: 2.2rem;
-    top: -5px;
-    left: -10px;
-    position: absolute;
-    z-index: 1;
-    white-space: normal;
-    word-wrap: break-word;
-    width: calc(100% + 20px);
-    line-height: 0.9;
+    top: -11px;
+    left: -5px;
   }
   
   .S-description {
-    font-size: 0.9rem;
-  }
-  
-  .SL {
-    padding-left: 12px;
-    border-left-width: 2px;
-  }
-}
-
-@media (max-width: 360px) {
-  .S-title {
-    font-size: 1.6rem;
-  }
-  
-  .S-title-shadow {
-    font-size: 1.8rem;
-    top: -5px;
-    left: -8px;
+    font-size: 1rem;
   }
 }

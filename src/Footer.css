@@ -1,10 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 .footer {
-  background: linear-gradient(135deg, #2a4669 0%, #325480 100%);
+  background-color: #133044;
   color: #ffffff;
   padding: 40px 0 20px;
   position: relative;
   overflow: hidden;
+     font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .footer::before {

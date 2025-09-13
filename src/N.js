@@ -5,7 +5,6 @@ import './N.css';
 const N = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-
   const carouselData = [
     {
       title: "АРХИТЕКТУРНО-СТРОИТЕЛЬНОЕ ПРОЕКТИРОВАНИЕ",
@@ -50,7 +49,6 @@ const N = () => {
     }
   ];
 
-  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselData.length);
@@ -60,19 +58,26 @@ const N = () => {
 
   return (
     <div className="engineering-center">
- 
       <header className="headerw">
-        <div className="logo-container">
-          <img src={logo} alt="КТК Логотип" className="logo" />
-        </div>
-        <h1 className="main-title">ИНЖЕНЕРНО-ПРОЕКТНЫЙ ЦЕНТР</h1>
-        <div className="divider-line"></div>
-        <div className="subtitle-container">
-          <h2 className="subtitle">КРЫМТЕХКОМ</h2>
-          <p className="description">№1 в Республике Крым</p>
+    
+        
+        <div className="header-content">
+          <h1 className="main-title">ИНЖЕНЕРНО-ПРОЕКТНЫЙ<br></br> ЦЕНТР</h1>
+          
+
+          <div className="logo-line-container">
+            <div className="logo-line">
+              <img src={logo} alt="КТК Логотип" className="line-logo" />
+              <div className="line"></div>
+            </div>
+          </div>
+          
+          <div className="company-name">
+            <h2 className="subtitle">КРЫМТЕХКОМ</h2>
+            <p className="description">№1 в Республике Крым</p>
+          </div>
         </div>
       </header>
-
 
       <div className="carousel-container">
         <div className="carousel-slides">
