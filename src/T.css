@@ -52,7 +52,7 @@
 }
 
 .contact-description-wrapper {
-  border-left: 4px solid #325480;
+  border-left: 8px solid #325480;
   padding-left: 12px;
   margin: 0 5px;
 }
@@ -136,6 +136,9 @@
     top: -12px;
     left: -8px;
   }
+  .contact-description-wrapper {
+  border-left: 5px solid #325480;
+  }
 }
 
 @media (max-width: 768px) {
@@ -172,7 +175,9 @@
   .contact-header {
     margin-bottom: 20px;
   }
-  
+   .contact-description-wrapper {
+  border-left: 5px solid #325480;
+  }
   .contact-title {
     font-size: 1.8rem;
   }
@@ -227,7 +232,9 @@
     top: -6px;
     left: -2px;
   }
-  
+   .contact-description-wrapper {
+  border-left: 5px solid #325480;
+  }
   .contact-description {
     font-size: 0.85rem;
   }

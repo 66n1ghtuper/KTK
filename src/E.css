@@ -206,8 +206,8 @@
 
 @media (max-width: 480px) {
   .service-card {
-    height: 220px;
-    min-height: 220px;
+    height: 250px;
+    min-height: 250px;
   }
   
   .service-title {
