@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logo from './ktk_logo.png';
+import logo from './img/ktk_logo.png';
 import './N.css';
 
-const N = () => {
+const N = ({ id }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const carouselData = [
@@ -57,7 +57,7 @@ const N = () => {
   }, [carouselData.length]);
 
   return (
-    <div className="engineering-center">
+      <div className="engineering-center" id={id}>
       <header className="headerw">
     
         

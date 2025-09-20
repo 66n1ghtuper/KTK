@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import logo from './ktk_logo.png';
+import logo from './img/ktk_logo.png';
 
-const Menu = () => {
+const Menu = ({ onServicesClick, onMainClick, onServiceSelect, onProjectsClick, onContactsClick, onAboutClick, onPrivacyClick }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +19,47 @@ const Menu = () => {
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
+  };
+
+  const handleMainClick = (e) => {
+    e.preventDefault();
+    onMainClick();
+    handleNavClick();
+  };
+
+  const handleServiceClick = (service) => {
+    onServiceSelect(service);
+    handleNavClick();
+  };
+
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    onServicesClick();
+    handleNavClick();
+  };
+
+  const handleProjectsClick = (e) => {
+    e.preventDefault();
+    onProjectsClick();
+    handleNavClick();
+  };
+
+  const handleContactsClick = (e) => {
+    e.preventDefault();
+    onContactsClick();
+    handleNavClick();
+  };
+
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    onAboutClick();
+    handleNavClick();
+  };
+
+  const handlePrivacyClick = (e) => {
+    e.preventDefault();
+    onPrivacyClick();
+    handleNavClick();
   };
 
   const toggleDropdown = (dropdownName) => {
@@ -75,7 +116,7 @@ const Menu = () => {
         <nav className={`mobil-navigation ${isMobileMenuOpen ? 'mobil-active' : ''}`}>
           <ul className="mobil-nav-list">
             <li className="mobil-nav-item">
-              <a href="#main" className="mobil-nav-link" onClick={handleNavClick}>
+              <a href="#main" className="mobil-nav-link" onClick={handleMainClick}>
                 Главная
               </a>
             </li>
@@ -86,34 +127,35 @@ const Menu = () => {
               <a 
                 href="#services" 
                 className="mobil-nav-link" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDropdown('services');
-                }}
+                onClick={handleServicesClick}
               >
                 Услуги
-                <span className="mobil-dropdown-arrow">▼</span>
               </a>
-              <div className="mobil-dropdown-menu">
+              <div className={`mobil-dropdown-menu ${activeDropdown === 'services' ? 'mobil-active' : ''}`}>
                 <ul className="mobil-dropdown-list">
                   <li className="mobil-dropdown-item">
-                    <a href="#architectural-design" onClick={handleNavClick}>
+                    <a href="#architectural-design" onClick={() => handleServiceClick('architectural-design')}>
                       Архитектурно-строительное проектирование
                     </a>
                   </li>
                   <li className="mobil-dropdown-item">
-                    <a href="#construction-works" onClick={handleNavClick}>
+                    <a href="#construction-works" onClick={() => handleServiceClick('construction-works')}>
                       Строительно-монтажные работы
                     </a>
                   </li>
                   <li className="mobil-dropdown-item">
-                    <a href="#engineering-surveys" onClick={handleNavClick}>
+                    <a href="#engineering-surveys" onClick={() => handleServiceClick('engineering-surveys')}>
                       Инженерные изыскания в строительстве
                     </a>
                   </li>
                   <li className="mobil-dropdown-item">
-                    <a href="#engineering-systems" onClick={handleNavClick}>
+                    <a href="#engineering-systems" onClick={() => handleServiceClick('engineering-systems')}>
                       Проектирование и монтаж инженерных систем
+                    </a>
+                  </li>
+                  <li className="mobil-dropdown-item">
+                    <a href="#it-solutions" onClick={() => handleServiceClick('it-solutions')}>
+                      Комплексные ИТ-решения
                     </a>
                   </li>
                 </ul>
@@ -121,40 +163,25 @@ const Menu = () => {
             </li>
 
             <li className="mobil-nav-item">
-              <a href="#projects" className="mobil-nav-link" onClick={handleNavClick}>
+              <a href="#projects" className="mobil-nav-link" onClick={handleProjectsClick}>
                 Проекты
               </a>
             </li>
 
             <li className="mobil-nav-item">
-              <a href="#contacts" className="mobil-nav-link" onClick={handleNavClick}>
+              <a href="#contacts" className="mobil-nav-link" onClick={handleContactsClick}>
                 Контакты
               </a>
             </li>
 
-            <li 
-              className={`mobil-nav-item mobil-dropdown ${activeDropdown === 'about' ? 'mobil-active' : ''}`}
-            >
+            <li className="mobil-nav-item">
               <a 
                 href="#about" 
                 className="mobil-nav-link" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDropdown('about');
-                }}
+                onClick={handleAboutClick}
               >
                 О компании
-                <span className="mobil-dropdown-arrow">▼</span>
               </a>
-              <div className="mobil-dropdown-menu">
-                <ul className="mobil-dropdown-list">
-                  <li className="mobil-dropdown-item">
-                    <a href="#privacy-policy" onClick={handleNavClick}>
-                      Политика конфиденциальности
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </li>
           </ul>
 
@@ -172,6 +199,11 @@ const Menu = () => {
             <div className="mobil-contact-address">
               295053, Респ. Крым, г. Симферополь,
               ул. Гурзувская, д. 1, цокольный этаж
+            </div>
+            <div className="mobil-privacy-link">
+              <a href="#privacy-policy" onClick={handlePrivacyClick}>
+                Политика конфиденциальности
+              </a>
             </div>
           </div>
         </nav>

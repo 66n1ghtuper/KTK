@@ -2,12 +2,12 @@
 
 .header {
   background-color: #fff;
-
   padding: 0.8rem 0;
   position: sticky;
   top: 0;
   z-index: 10;
   margin: 0;
+  transition: all 0.3s ease;
 }
 
 .header.scrolled {
@@ -16,27 +16,34 @@
 }
 
 .header-container {
+ 
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   position: relative;
 }
 
 .logo-section {
-  position: absolute;
-  left: 2rem;
+  flex: 0 0 auto;
 }
 
 .logo-img {
   height: 48px;
   width: auto;
   border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 .navigation {
-  margin: 0 auto;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-list {
@@ -66,6 +73,8 @@
   font-size: 1.05rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  border-radius: 6px;
 }
 
 .nav-link:hover, .nav-button:hover {
@@ -73,11 +82,18 @@
   background-color: #f8faff;
 }
 
+.nav-link.active, .nav-button.section-active {
+  color: #1e1e1e;
+  background-color: #eff6ff;
+}
+
 .nav-button.active {
   color: #2b2b2b;
   background-color: #eff6ff;
   box-shadow: 0 2px 8px rgba(65, 65, 65, 0.1);
 }
+
+
 
 .dropdown {
   position: relative;
@@ -93,6 +109,13 @@
   min-width: 300px;
   z-index: 50;
   border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .dropdown-list {
@@ -104,10 +127,11 @@
 .dropdown-item {
   padding: 0.9rem 1rem;
   color: #475569;
-
   margin-bottom: 0.25rem;
   font-weight: 500;
   font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .dropdown-item:last-child {
@@ -129,8 +153,7 @@
 }
 
 .contact-info {
-  position: absolute;
-  right: 2rem;
+  flex: 0 0 auto;
   text-align: right;
 }
 
@@ -150,6 +173,7 @@
   align-items: center;
   gap: 0.4rem;
   font-weight: 700;
+  transition: color 0.2s ease;
 }
 
 .phone-number:hover a,
@@ -162,3 +186,4 @@
   font-weight: 600;
   color: #64748b;
 }
+

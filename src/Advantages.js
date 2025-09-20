@@ -1,9 +1,9 @@
 import React from 'react';
 import './Advantages.css';
 
-import IconTeam from './n1.png';
-import IconExperience from './n3.png';
-import IconReputation from './n2.png';
+import IconTeam from './img/n1.png';
+import IconExperience from './img/n3.png';
+import IconReputation from './img/n2.png';
 
 const Advantages = () => {
   const advantagesData = [

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Q.css';
-import Img1 from './0.jpg';
-import Img2 from './e2.png';
-import Img3 from './e1.png';
-import Img4 from './e4.jpg';
+import Img1 from './img/0.jpg';
+import Img2 from './img/e2.png';
+import Img3 from './img/e1.png';
+import Img4 from './img/e4.jpg';
 
 const Q = () => {
   const [currentImage, setCurrentImage] = useState(0);

@@ -1,6 +1,6 @@
 import React from 'react';
 import './S.css';
-import ImgGF from './5.png';
+import ImgGF from './img/5.png';
 
 const S = () => {
   return (
