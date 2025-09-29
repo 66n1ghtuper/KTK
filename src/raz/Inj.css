@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.inj-section {
+  padding: 0;
+  max-width: none;
+  margin: 0;
+  position: relative;
+  text-align: left;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.inj-header-background {
+  background-image: url('./title_fon.png');
+  background-color: #133044;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 97.8%;
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inj-header-content {
+  position: relative;
+  display: inline-block;
+  max-width: 1400px;
+  width: 100%;
+  text-align: left;
+}
+
+.inj-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.inj-title-shadow {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  z-index: 1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.inj-learn-more-btn {
+  background: #325480;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: "Manrope", sans-serif;
+  z-index: 2;
+  position: relative;
+}
+
+.inj-learn-more-btn:hover {
+  background: #2a4669;
+  transform: translateY(-2px);
+}
+
+/* Card Grid Styles */
+.inj-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 60px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inj-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inj-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.inj-card-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.inj-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.inj-card:hover .inj-card-image img {
+  transform: scale(1.05);
+}
+
+.inj-card-content {
+  padding: 25px;
+}
+
+.inj-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.inj-card-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Project Documentation Styles */
+.inj-project-documentation {
+  background: #f8f9fa;
+  padding: 40px;
+  margin: 60px 20px;
+  border-left: 8px solid #325480;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inj-documentation-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.inj-documentation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.inj-description-block p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+.inj-points-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inj-points-list li {
+  padding: 3px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.inj-points-list li:before {
+  content: "•";
+  color: #325480;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+/* Accordion Styles */
+.inj-accordion-section {
+  margin: 80px 20px 40px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inj-accordion-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inj-accordion {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.inj-accordion-item {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.inj-accordion-item.active {
+  border-color: #325480;
+}
+
+.inj-accordion-header {
+  padding: 25px 30px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.inj-accordion-header:hover {
+  background: #f8f9fa;
+}
+
+.inj-accordion-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.inj-accordion-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #325480;
+  transition: transform 0.3s ease;
+}
+
+.inj-accordion-item.active .inj-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.inj-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: white;
+}
+
+.inj-accordion-item.active .inj-accordion-content {
+  max-height: 2000px;
+}
+
+.inj-accordion-text {
+  padding: 0 30px 25px 30px;
+}
+
+.inj-accordion-text ol,
+.inj-accordion-text ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.inj-accordion-text li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.inj-accordion-text strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.inj-accordion-text em {
+  color: #666;
+  font-style: italic;
+}
+
+.inj-accordion-text p {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #333;
+}

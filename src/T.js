@@ -30,7 +30,8 @@ const T = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section className="cont">
+            <div className="contact-section">
       <div className="contact-header">
         <h2 className="contact-title">СВЯЗЬ С НАМИ</h2>
         <div className="contact-title-shadow">СВЯЗЬ С НАМИ</div>
@@ -106,6 +107,7 @@ const T = () => {
           Отправить
         </button>
       </form>
+      </div>
     </section>
   );
 };
