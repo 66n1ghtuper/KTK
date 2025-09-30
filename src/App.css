@@ -15,7 +15,6 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-/* Если нужно применить ко всем элементам */
 .App,
 .App * {
   font-family: 'Manrope', sans-serif;

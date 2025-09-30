@@ -75,7 +75,6 @@ const Proekt = () => {
 
   return (
     <section className="proekt-section">
-      {/* Header Section */}
       <div className="proekt-header-background">
         <div className="proekt-header-content">
           <h1 className="proekt-title">Проектирование и монтаж инженерных систем</h1>
@@ -84,7 +83,6 @@ const Proekt = () => {
         </div>
       </div>
 
-      {/* Engineering Systems Cards */}
       <div className="proekt-card-grid">
         {engineeringSystems.map((system, index) => (
           <div key={index} className="proekt-card">
@@ -99,7 +97,6 @@ const Proekt = () => {
         ))}
       </div>
 
-      {/* Accordion Section */}
       <div className="proekt-accordion-section">
         <h2 className="proekt-accordion-title">Дополнительные услуги</h2>
         <div className="proekt-accordion">

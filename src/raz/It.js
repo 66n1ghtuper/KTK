@@ -63,7 +63,6 @@ const It = () => {
 
   return (
     <section className="it-section">
-      {/* Header Section */}
       <div className="it-header-background">
         <div className="it-header-content">
           <h1 className="it-title">
@@ -89,7 +88,6 @@ const It = () => {
         </div>
       </div>
 
-      {/* Cards Grid */}
       <div className="it-card-grid">
         {cards.map((card) => (
           <div key={card.id} className="it-card">
@@ -110,7 +108,6 @@ const It = () => {
         ))}
       </div>
 
-      {/* Cooperation Formats */}
       <div className="it-accordion-section">
         <h2 className="it-accordion-title">Форматы сотрудничества</h2>
         <div className="it-accordion">

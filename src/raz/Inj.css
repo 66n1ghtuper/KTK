@@ -81,7 +81,6 @@
   transform: translateY(-2px);
 }
 
-/* Card Grid Styles */
 .inj-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -141,7 +140,6 @@
   margin: 0;
 }
 
-/* Project Documentation Styles */
 .inj-project-documentation {
   background: #f8f9fa;
   padding: 40px;
@@ -199,7 +197,6 @@
   top: -4px;
 }
 
-/* Accordion Styles */
 .inj-accordion-section {
   margin: 80px 20px 40px 20px;
   max-width: 1400px;

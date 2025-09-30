@@ -33,7 +33,6 @@ const BB = () => {
 
   return (
     <div className="bb-section">
-      {/* Header Section */}
       <div className="bb-header-background">
         <div className="bb-header-content">
           <h1 className="bb-title">Строительно-монтажные работы</h1>
@@ -42,7 +41,6 @@ const BB = () => {
         </div>
       </div>
 
-      {/* Accordion Section */}
       <div className="bb-accordion-section">
         <h2 className="bb-accordion-title">Направления работ</h2>
         <div className="bb-accordion">
@@ -70,7 +68,6 @@ const BB = () => {
         </div>
       </div>
 
-      {/* Documentation Section */}
       <div className="bb-project-documentation">
         <div className="bb-documentation-header">
           <h2>Документооборот и ввод в эксплуатацию</h2>

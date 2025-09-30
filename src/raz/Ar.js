@@ -86,7 +86,6 @@ const Ar = () => {
 
   return (
     <div className="xcer-section">
-      {/* Header с фоном */}
       <div className="xcer-header-background">
         <div className="xcer-header-content">
           <div className="xcer-title">Архитектурно строительное проектирование</div>
@@ -95,7 +94,6 @@ const Ar = () => {
         </div>
       </div>
 
-      {/* CardGrid */}
       <div className="xcer-card-grid">
         {works.map((work, index) => (
           <div key={index} className="xcer-card">
@@ -127,7 +125,6 @@ const Ar = () => {
         </div>
       </div>
 
-      {/* Аккордеон */}
       <div className="xcer-accordion-section">
         <h2 className="xcer-accordion-title">Детали проектирования</h2>
         <div className="xcer-accordion">

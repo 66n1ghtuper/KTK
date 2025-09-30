@@ -96,7 +96,6 @@ const Inj = () => {
 
   return (
     <section className="inj-section">
-      {/* Header Section */}
       <div className="inj-header-background">
         <div className="inj-header-content">
           <h1 className="inj-title">Инженерные изыскания для строительства</h1>
@@ -105,7 +104,6 @@ const Inj = () => {
         </div>
       </div>
 
-      {/* Services Grid */}
       <div className="inj-card-grid">
         {services.map((service, index) => (
           <div key={index} className="inj-card">
@@ -126,7 +124,6 @@ const Inj = () => {
         ))}
       </div>
 
-      {/* Documentation Section */}
       <div className="inj-project-documentation">
         <div className="inj-documentation-header">
           <h2>Результаты и отчётность</h2>
@@ -150,7 +147,6 @@ const Inj = () => {
         </div>
       </div>
 
-      {/* Accordion Section */}
       <div className="inj-accordion-section">
         <h2 className="inj-accordion-title">Часто задаваемые вопросы</h2>
         <div className="inj-accordion">
