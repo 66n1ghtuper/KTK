@@ -1,5 +1,3 @@
-/* It.css */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 .it-section {
   padding: 0;
@@ -7,8 +5,7 @@
   margin: 0;
   position: relative;
   text-align: left;
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+
 }
 
 .it-header-background {
@@ -83,7 +80,7 @@
   transform: translateY(-2px);
 }
 
-/* Card Grid Styles */
+
 .it-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -143,7 +140,6 @@
   margin: 0;
 }
 
-/* Accordion Styles */
 .it-accordion-section {
   margin: 80px 20px 40px 20px;
   max-width: 1400px;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 .cont{
   background-color: #f3f7fb;
 }
@@ -8,8 +8,7 @@
   margin: 0 auto;
   position: relative;
   text-align: left;
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+
 }
 
 .contact-header {

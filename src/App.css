@@ -1,3 +1,22 @@
-body{
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
   margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Если нужно применить ко всем элементам */
+.App,
+.App * {
+  font-family: 'Manrope', sans-serif;
 }

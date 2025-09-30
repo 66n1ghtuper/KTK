@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 .W {
   padding: 60px 20px;
@@ -7,8 +7,7 @@
   margin: 0 auto;
   position: relative;
   text-align: left;
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+
 }
 
 .W-header {

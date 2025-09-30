@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 .advantages {
   padding: 40px 15px;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-    font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+
 }
 
 .advantages-header {

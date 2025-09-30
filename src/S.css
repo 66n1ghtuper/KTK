@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 .S {
   padding: 20px 15px;
@@ -7,8 +7,7 @@
   position: relative;
   text-align: left;
   min-height: 20vh;
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
+
 }
 
 .S-header {
